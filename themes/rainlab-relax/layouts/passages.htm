@@ -1,0 +1,63 @@
+description = "文章显示模板"
+
+[staticMenu]
+code = "client-menu"
+
+[staticPage]
+
+[blogPost]
+slug = ":slug"
+categoryPage = "blog/post"
+==
+<!DOCTYPE html>
+<html>
+<head>
+    {% partial 'hz_meta' %}
+
+</head>
+<body style="height: 100%;">
+
+<div id="main_con" style="min-height:100%;">
+        
+        {% partial 'hz_header_organ' %}
+         
+        {% partial 'hz_nav' %}
+        <div>
+             {% set hasChildren = (staticPage.parent ?: staticPage.page).children %}
+
+                <div class="content-area with-padding">
+                    {% if hasChildren %}
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="module-sidemenu">
+                                    {% partial 'sidemenu' page=staticPage.page %}
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                {% page %}
+                            </div>
+                        </div>
+                    {% else %}
+                        {% page %}
+                    {% endif %}
+                </div>
+         </div>
+
+     
+<div id="footer"  style="margin-top:100px;">
+    <div id="fline1">地址：广东省惠州市惠城区江北富民路10号惠州卫生大楼 邮编：516003 备案证编号：粤ICP备09030645号-1 主办及维护单位：惠州市卫生监督所 </div>
+    <div id="fline2">© 2012 wsjds.huizhou.gov.cn All Rights Reserved 技术支持及意见：<span class=""><a href="mailto:support@everants.com?Subject=Comments%20On%20WSJDS%20Huizhou" style="color:#00DAFF;">support@everants.com</a>  
+    </span> </div>
+          <div style="text-decoration:none;height:20px;line-height:20px; margin-right:10px;margin-top:-31px;position:relative;">
+		 	<a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44130202000277" ><img src="http://wsjds.huizhou.gov.cn/themes/rainlab-relax/assets/images/beian_icon.png" style="width:20px;height:20px;margin-left:400px;" />
+              <div style="float:left;height:20px;line-height:20px;margin-left:420px; margin-top:-19px;color:#939393;">粤公网安备 44130202000277号</div></a>
+          </div>
+</div>
+		 
+    </div>
+    
+
+        {% partial 'hz_scripts' %}
+
+</body>
+</html>

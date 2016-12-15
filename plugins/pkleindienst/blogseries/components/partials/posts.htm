@@ -1,0 +1,14 @@
+
+ <ul id="itemContainer">
+      {% for post in series.posts %}
+        <li>
+            <h4 style="margin-top:-19px;">
+                <a href="{{ post.url }}">{{ post.title }}</a>
+            </h4>
+        </li>
+    {% else %}
+ </ul>
+    <div class="no-data">
+        <p>{{ 还没发布文章呢！ }}</p>
+    </div>
+    {% endfor %}

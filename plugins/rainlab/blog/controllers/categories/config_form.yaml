@@ -1,0 +1,18 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# name: 作者
+form: ~/plugins/rainlab/blog/models/category/fields.yaml
+modelClass: RainLab\Blog\Models\Category
+defaultRedirect: rainlab/blog/categories
+
+create:
+    title: 添加作者
+    redirect: rainlab/blog/categories/update/:id
+    redirectClose: rainlab/blog/categories
+
+update:
+    title: 编辑作者
+    redirect: rainlab/blog/categories
+    redirectClose: rainlab/blog/categories

@@ -1,0 +1,71 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    title:
+        label: 标题
+        span: left
+        placeholder: 新标题
+
+    slug:
+        label: 参数
+        span: right
+        placeholder: 数字参数(唯一)
+        preset:
+            field: title
+            type: slug
+
+    toolbar:
+        type: partial
+        path: post_toolbar
+        cssClass: collapse-visible
+
+secondaryTabs:
+    stretch: true
+    fields:
+        content:
+            tab: 编辑
+            type: RainLab\Blog\FormWidgets\BlogMarkdown
+            cssClass: field-slim blog-post-preview
+            stretch: true
+            mode: split
+
+        categories:
+            tab: 作者
+            type: relation
+            commentAbove: 选择文章的作者
+            placeholder: rainlab.blog::lang.post.categories_placeholder
+
+        published:
+            tab: 管理发布
+            label: 发布
+            span: left
+            type: checkbox
+
+        published_at:
+            tab: 管理发布
+            label: 发布于
+            span: left
+            cssClass: checkbox-align
+            type: datepicker
+            mode: datetime
+            trigger:
+                action: enable
+                field: published
+                condition: checked
+
+        excerpt:
+            tab: 管理发布
+            label: 摘要
+            type: textarea
+            size: small
+
+        featured_images:
+            tab: 管理发布
+            label: 图片
+            type: fileupload
+            mode: image
+            imageWidth: 200
+            imageHeight: 200

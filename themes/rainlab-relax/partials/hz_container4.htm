@@ -1,0 +1,55 @@
+description = "右边框"
+
+[viewBag]
+
+[searchPosts]
+slug = "公示"
+pageNumber = "{{ :page }}"
+postsPerPage = 5
+postPage = "blog/post"
+sortOrder = "published_at desc"
+
+[searchPosts searchPosts2]
+slug = "曝光台"
+pageNumber = "{{ :page }}"
+postsPerPage = 5
+postPage = "blog/post"
+sortOrder = "published_at desc"
+==
+<div id="l_container4">
+        <div class="column column7">
+            <div class="column_title">
+                <div class="columntil_l"><span>公示</span></div>
+                <div class="columntil_r"><a class="more_link" href="/notice/public"></a></div>
+            </div>
+            <div class="column_body">
+                         {% component 'searchPosts' %}      
+            </div>
+            <div class="column_bottom_2">
+                <div class="column_bot_l">&nbsp;</div>
+                <div class="column_bot_r">&nbsp;</div>
+            </div>
+        </div>
+
+
+        <div class="column column8">
+            <div class="column_title">
+                <div class="columntil_l"><span>曝光台</span></div>
+                <div class="columntil_r"><a class="more_link" href="/notice/lighthouse"></a></div>
+            </div>
+            <div class="column_body">
+                
+                    <ul>
+                    {% component 'searchPosts2' %}
+                    </ul>
+                
+            </div>
+            <div class="column_bottom">
+                <div class="column_bot_l">&nbsp;</div>
+                <div class="column_bot_r">&nbsp;</div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="clear">&nbsp;</div>

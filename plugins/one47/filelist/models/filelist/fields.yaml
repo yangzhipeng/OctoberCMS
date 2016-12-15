@@ -1,0 +1,13 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    name:
+        span: full
+        label: 文件夹名称
+
+    files:
+        label: 文件
+        type: fileupload
+        mode: file

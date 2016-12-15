@@ -1,0 +1,22 @@
+plugin:
+    name: 'word.message::lang.plugin.name'
+    description: 'word.message::lang.plugin.description'
+    author: young
+    icon: oc-icon-twitch
+    homepage: ''
+navigation:
+    回复:
+        label: 回复
+        url: word/message/replys
+        icon: icon-book
+        permissions:
+            - word.message.manage_word
+        sideMenu:
+            Words:
+                label: Words
+                url: word/message/replys
+                icon: icon-bookmark
+permissions:
+    word.message.manage_word:
+        tab: 'word.message::lang.plugin.name'
+        label: 'word.message::lang.word.manage_words'

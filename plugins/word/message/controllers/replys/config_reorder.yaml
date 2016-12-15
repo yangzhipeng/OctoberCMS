@@ -1,0 +1,4 @@
+title: Replys
+modelClass: word\Message\Models\Word
+toolbar:
+    buttons: reorder_toolbar

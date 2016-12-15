@@ -1,0 +1,31 @@
+description = "工作内容"
+
+[viewBag]
+
+[staticMenu]
+
+[staticPage]
+
+[searchPosts]
+slug = "工作动态"
+pageNumber = "{{ :page }}"
+postsPerPage = 18
+postPage = "blog/post"
+sortOrder = "published_at desc"
+==
+<div id="rightcon">
+        <div class="article_list_con" >
+            <div class="article_list_title" >
+                <span>
+                 工作动态
+                </span>
+            </div>
+      <div class="article_list_con_body">
+          {% component 'searchPosts' %}
+          
+      </div>
+      
+             <div class="article_list_con_bot"></div>
+        </div>
+    </div>
+<div class="clear">&nbsp;</div>

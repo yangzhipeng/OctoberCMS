@@ -1,0 +1,13 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+    name:
+        label: 姓名
+        searchable: true
+
+    post_count:
+        label: 发布数量
+        sortable: false

@@ -1,0 +1,32 @@
+description = "右边框2"
+
+[viewBag]
+
+[listPosts]
+slug = "曝光台"
+postsPerPage = 6
+postPage = "blog/post"
+sortOrder = "published_at desc"
+==
+<div id="l_container4">
+        <div class="column column8">
+            <div class="column_title">
+                <div class="columntil_l"><span>曝光台</span></div>
+                <div class="columntil_r"><a class="more_link" href="/notice/lighthouse"></a></div>
+            </div>
+            <div class="column_body" style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">
+
+                    {% component 'listPosts' %}
+
+            </div>
+            <div class="column_bottom">
+                <div id="contact_container2">
+                    <a id="jubaodianhua" href="#"></a>
+                </div>
+                <div class="column_bot_l">&nbsp;</div>
+                <div class="column_bot_r">&nbsp;</div>
+            </div>
+        </div>
+
+    </div>
+    <div class="clear">&nbsp;</div>

@@ -1,0 +1,24 @@
+{% set post = __SELF__.post %}
+
+<style type="text/css">
+     p{
+	     text-indent:2em;
+	 }
+</style>
+
+<div class="content" style="text-align:left;width:800px;margin-left:37px;">{{ post.content_html|raw }}</div>
+
+{% if post.featured_images.count %}
+    <div class="featured-images text-center">
+        {% for image in post.featured_images %}
+            <p>
+                <img
+                    data-src="{{ image.filename }}"
+                    src="{{ image.path }}"
+                    alt="{{ image.description }}"
+                    style="max-width: 80%" />
+            </p>
+        {% endfor %}
+    </div>
+{% endif %}
+

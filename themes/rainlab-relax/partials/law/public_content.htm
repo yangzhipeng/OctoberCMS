@@ -1,0 +1,26 @@
+description = "公共场所卫生"
+
+[viewBag]
+
+[searchPosts]
+slug = "公共场所卫生"
+pageNumber = "{{ :page }}"
+postsPerPage = 18
+postPage = "blog/post"
+sortOrder = "published_at desc"
+==
+<div id="rightcon">
+        <div class="article_list_con">
+            <div class="article_list_title">
+                <span>
+                    
+                        公共场所卫生
+                    
+                </span>
+            </div>
+            <div class="article_list_con_body">
+                   {% component 'searchPosts' %}
+            </div>
+     </div>
+    </div>
+<div class="clear">&nbsp;</div>

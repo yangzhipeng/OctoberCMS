@@ -1,0 +1,23 @@
+description = "通告公示征集"
+
+[viewBag]
+
+[searchPosts]
+slug = "调查征集"
+pageNumber = "{{ :page }}"
+postsPerPage = 5
+postPage = "blog/post"
+sortOrder = "published_at desc"
+==
+<div id="rightcon">
+ <div class="article_list_con article_list_con-type2">
+                <div class="article_list_title">
+                    <span>调查征集</span>
+                    <a class="more_link" href="/notice/msgCollect"></a>
+                </div>
+                <div class="article_list_con_body type2" style="overflow:hidden;">
+                   {% component 'searchPosts' %}
+                </div>
+            </div>
+            </div>
+<div class="clear">&nbsp;</div>

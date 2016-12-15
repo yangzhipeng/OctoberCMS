@@ -1,0 +1,17 @@
+{% set postNav = __SELF__ %}
+
+{% if postNav.series and postNav.series.posts %}
+<div style="text-align:left;margin-top:-20px;">
+    {% if postNav.smallNav %}
+        <div>
+            <!-- This post is part of a series called --> <!-- <a href="{{ postNav.series.url }}"> -->{{ postNav.series.title }}<!-- </a> -->
+
+        </div>
+    {% else %}
+        <div>
+            <!-- This post is part of a series called  --><!-- <a href="{{ postNav.series.url }}" -->>>&nbsp;&nbsp;{{ postNav.series.title }}
+        </div>
+
+    {% endif %}
+</div>
+{% endif %}

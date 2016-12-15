@@ -1,0 +1,16 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    name:
+        label: 姓名
+        placeholder: rainlab.blog::lang.category.name_placeholder
+        span: left
+
+    slug:
+        label: 参数
+        span: right
+        placeholder: rainlab.blog::lang.category.slug_placeholder
+        preset: name

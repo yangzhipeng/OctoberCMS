@@ -1,0 +1,43 @@
+columns:
+    id:
+        label: id
+        type: number
+        searchable: true
+    subject:
+        label: 标题
+        type: text
+        searchable: true
+        sortable: true
+    content:
+        label: 留言
+        type: textarea
+        size: large
+    sender:
+        label: 留言者
+        type: text
+        searchable: true
+    email:
+        label: 邮箱
+        type: text
+        searchable: true
+    phone:
+        label: 电话
+        type: number
+        searchable: true
+    address:
+        label: 地址
+        type: text
+        searchable: true
+    created_at:
+        label: 留言创建时间
+        type: text
+        searchable: true
+    reply_content:
+        label: 回复内容
+        type: text
+        searchable: true
+        size: large
+    updated_at:
+        label: 回复创建时间
+        type: text
+        searchable: true

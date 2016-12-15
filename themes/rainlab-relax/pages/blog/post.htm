@@ -1,0 +1,65 @@
+title = "Blog Post"
+url = "/blog/post/:slug"
+layout = "passages"
+description = "Viewing a single blog post"
+is_hidden = 0
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/category"
+
+[postNavigation]
+slug = "{{ :slug }}"
+smallNav = 0
+postPage = "blog/post"
+seriesPage = "blog/category"
+
+[views]
+slug = "{{ :slug }}"
+==
+<?php
+function onEnd()
+{
+    /*$this['tagline'] = $this->post->title;*/
+    if (isset($this->post))
+        $this->page->title = $this->post->title;
+    $this['bannerImage'] = $this->themeUrl('assets/images/blog-banner.jpg');
+
+    if ($this->post && $this->post->featured_images->count() > 0) {
+        $this['bannerImage'] = $this->post->featured_images->first()->getPath();
+    }
+}
+?>
+==
+<div id="crumbs" style="text-align:left;">
+        <a href="/">首页</a>
+    </div>
+
+<div class="row">
+        <div class="col-md-11" style="margin-left:40px;">
+         {% if post %}
+           {% component 'postNavigation' %}
+         <h3><strong>{{ post.title }}</strong></h3>
+         <p class="info" style="color:#8E8181">
+    作者：
+    {% if post.categories.count %}
+        {% for category in post.categories %}
+            <!-- <a href="{{ category.url }}"> -->{{ category.name }}<!-- </a> -->
+                 {% if not loop.last %}, {% endif %}
+        {% endfor %}
+    {% endif %}
+     &nbsp;&nbsp;发布时间：{{ post.published_at|date('Y 年 m 月 d 日') }}&nbsp;&nbsp;
+    {% component 'views' %}
+        </p> 
+    <hr/>
+         {% component 'blogPost' %}
+       
+         {% else %}
+         <h2>亲，这篇文章不存在噢！</h2>
+         {% endif %}
+{#        {% component 'blogPost' %}#}
+    </div>
+    <div class="col-md-4">
+        {% partial 'blog/categories' %}
+    </div>
+</div>

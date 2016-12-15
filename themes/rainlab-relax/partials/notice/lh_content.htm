@@ -1,0 +1,28 @@
+[viewBag]
+
+[staticMenu]
+
+[staticPage]
+
+[searchPosts]
+slug = "曝光台"
+pageNumber = "{{ :page }}"
+postsPerPage = 18
+postPage = "blog/post"
+sortOrder = "published_at desc"
+==
+<div id="rightcon">
+        <div class="article_list_con">
+            <div class="article_list_title">
+                <span>
+                 曝光台
+                </span>
+            </div>
+            <div class="article_list_con_body">
+                  {% component 'searchPosts' %}
+            </div>
+            </div>
+
+        </div>
+
+<div class="clear">&nbsp;</div>

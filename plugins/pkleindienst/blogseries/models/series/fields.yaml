@@ -1,0 +1,28 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    title:
+        label: 系列名
+        span: left
+        required: true
+
+    slug:
+        label: 参数
+        span: right
+        placeholder: Slug
+        required: true
+        preset:
+            field: title
+            type: slug
+
+    description:
+        label: 描述
+        type: richeditor
+        size: huge
+
+    posts:
+        label: 发布
+        type: partial
+        path: field_posts

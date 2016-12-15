@@ -1,0 +1,12 @@
+<div class="row" style="height:-10px"></div>
+
+<div class="fl-style">
+    {% if filelist.files|length > 0 %}
+	<ul id="itemContainer" class="nav nav-pills nav-stacked " style="font-size:12px;width: 100%; margin-top: 5px;margin-left:-12px;text-align:left;line-height:1px;">
+    {% for i, file in filelist.files %}
+      <h8>{{ file.description }}</h8>
+      <li><a href="{{ file.path }}" target="_blank" >{{ file.title }}</a></li>
+    {% endfor %}
+    </ul>
+    {% endif %}
+</div>

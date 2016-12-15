@@ -1,0 +1,72 @@
+fields:
+    # id:
+    #     label: id
+    #     oc.commentPosition: ''
+    #     span: auto
+    #     required: 1
+    #     type: number
+    # subject:
+    #     label: 标题
+    #     oc.commentPosition: ''
+    #     span: auto
+    #     required: 1
+    #     type: text
+    # content:
+    #     label: 留言
+    #     size: ''
+    #     oc.commentPosition: ''
+    #     span: auto
+    #     type: textarea
+    #     size: large
+    reply_content:
+        label: 回复留言
+        size: ''
+        oc.commentPosition: ''
+        span: full
+        type: markdown
+        size: large
+
+    # slug:
+    #     label: slug
+    #     oc.commentPosition: ''
+    #     span: auto
+    #     preset:
+    #         field: subject
+    #         type: slug
+    #     type: text
+    # sender:
+    #     label: sender
+    #     oc.commentPosition: ''
+    #     span: auto
+    #     type: text
+    # create_datetime:
+    #     label: create_datetime
+    #     oc.commentPosition: ''
+    #     span: auto
+    #     type: text
+    # reply_datetime:
+    #     label: reply_datetime
+    #     oc.commentPosition: ''
+    #     span: auto
+    #     type: text
+    # is_closed:
+    #     label: is_closed
+    #     oc.commentPosition: ''
+    #     span: auto
+    #     type: text
+    # email:
+    #     label: email
+    #     oc.commentPosition: ''
+    #     span: auto
+    #     type: text
+    # phone:
+    #     label: phone
+    #     oc.commentPosition: ''
+    #     span: auto
+    #     type: number
+    # address:
+    #     label: address
+    #     oc.commentPosition: ''
+    #     span: auto
+    #     type: text
+

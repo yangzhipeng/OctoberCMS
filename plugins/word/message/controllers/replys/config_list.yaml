@@ -1,0 +1,12 @@
+title: 回复
+modelClass: word\Message\Models\Word
+list: $/word/message/models/word/columns.yaml
+recordUrl: 'word/message/replys/update/:id'
+noRecordsMessage: 'backend::lang.list.no_records'
+recordsPerPage: 10
+showSetup: true
+showCheckboxes: true
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'

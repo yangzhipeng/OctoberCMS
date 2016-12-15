@@ -1,0 +1,33 @@
+{% set posts = __SELF__.posts %}
+{% set tag = __SELF__.tag %}
+
+<ul class="post-list" >
+    {% for post in posts %}
+        <li>
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+
+            <p class="info">
+               
+                {% if post.categories.count %}  {% endif %}
+                 {{ post.published_at|date('Y-m-d') }} 
+                <i class="glyphicon glyphicon-tags"></i>
+            </p>
+        </li>
+    {% else %}
+        <li class="no-data">这页还没有相关的文章噢！</li>
+    {% endfor %}
+</ul>
+
+{% if posts.lastPage > 1 %}
+    <ul class="pagination" style="margin-top:100px;">
+        {% if posts.currentPage > 1 %}
+            <li style="float:left;display:inline;width:20px;text-align:center;"><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage-1) }) }}?page={{(posts.currentPage-1)}}">&larr; 上一页</a></li>
+        {% endif %}
+
+      
+
+        {% if posts.lastPage > posts.currentPage %}
+            <li style="float:left;display:inline;width:20px;margin-left:50px;text-align:center;"><a href="{{ this.page.baseFileName|page({ (pageParam): (posts.currentPage+1) }) }}?page={{(posts.currentPage+1)}}">下一页 &rarr;</a></li>
+        {% endif %}
+    </ul>
+{% endif %}

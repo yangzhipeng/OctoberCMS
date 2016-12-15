@@ -1,0 +1,22 @@
+# ===================================
+#  List Column Definitions
+# ===================================
+
+columns:
+    title:
+        label: 系列名
+        searchable: true
+
+    post_count:
+       label: 发布数量
+       sortable: false
+
+    created_at:
+        label: 创建时间
+        type: date
+        invisible: true
+
+    updated_at:
+        label: 更新时间
+        type: date
+        invisible: true

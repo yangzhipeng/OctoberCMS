@@ -1,0 +1,13 @@
+name: Replys
+modelClass: word\Message\Models\Word
+form: $/word/message/models/word/fields.yaml
+defaultRedirect: word/message/replys
+create:
+    title: 新回复
+    redirect: 'word/message/replys/update/:id'
+    redirectClose: word/message/replys
+update:
+    title: 编辑回复
+    redirect: word/message/replys
+    redirectClose: word/message/replys
+preview: {  }

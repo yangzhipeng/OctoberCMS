@@ -1,0 +1,6 @@
+plugin:
+    name: 'captionvalues.values::lang.plugin.name'
+    description: 'captionvalues.values::lang.plugin.description'
+    author: young
+    icon: oc-icon-photo
+    homepage: ''

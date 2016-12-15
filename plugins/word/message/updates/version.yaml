@@ -1,0 +1,17 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table word_message_jiandu'
+    - builder_table_create_word_message_jiandu.php
+1.0.3:
+    - 'Updated table word_message_jiandu'
+    - builder_table_update_word_message_jiandu.php
+1.0.4:
+    - 'Updated table word_message_jiandu'
+    - builder_table_update_word_message_jiandu_2.php
+1.0.5:
+    - 'Updated table word_message_jiandu'
+    - builder_table_update_word_message_jiandu_3.php
+1.0.6:
+    - 'Updated table word_message_jiandu'
+    - builder_table_update_word_message_jiandu_4.php

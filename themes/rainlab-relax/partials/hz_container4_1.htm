@@ -1,0 +1,25 @@
+description = "右边框1"
+
+[viewBag]
+
+[listPosts]
+slug = "公示"
+postsPerPage = 6
+postPage = "blog/post"
+sortOrder = "published_at desc"
+==
+<div id="l_container4">
+        <div class="column column7">
+            <div class="column_title">
+                <div class="columntil_l"><span>公示</span></div>
+                <div class="columntil_r"><a class="more_link" href="/notice/public"></a></div>
+            </div>
+            <div class="column_body" style="overflow:hidden;white-space:nowrap;text-overflow:ellipsis;">
+                       {% component 'listPosts' %}
+            </div>
+            <div class="column_bottom" style="height:5px">
+                <div class="column_bot_l">&nbsp;</div>
+                <div class="column_bot_r">&nbsp;</div>
+            </div>
+        </div>
+</div>
